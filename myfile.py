@@ -1,8 +1,6 @@
 def fibonacci(n):
-    #if(n < 0){
-    #    print("Input shpuld be >=0")
-    #    return null
-	#}
+    #if(n < 0):
+     #   raise ValueError("Integer Input should be greater than 0")
     number1 = 0
     number2 = 1
     sum = 0
