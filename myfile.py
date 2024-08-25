@@ -1,12 +1,12 @@
 n = 9
-num1 = 0
-num2 = 1
-next_number = num2  
+number1 = 0
+number2 = 1
+sum = number2  
 count = 1
  
 while count <= n:
-    print(next_number, end=" ")
+    print(sum, end=" ")
     count += 1
-    num1, num2 = num2, next_number
-    next_number = num1 + num2
+    number1, number2 = number2, sum
+    sum = number1 + number2
 print()
