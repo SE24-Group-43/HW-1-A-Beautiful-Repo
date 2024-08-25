@@ -1,16 +1,18 @@
 def fibonacci(n):
+    #if(n < 0){
+    #    print("Input shpuld be >=0")
+    #    return null
+	#}
     number1 = 0
     number2 = 1
-    sum = number2  
-    count = 1
-	
+    sum = 0
+    count = 2
+    
     while count <= n:
-        print(sum, end=" ")
         count += 1
-        number1, number2 = number2, sum
         sum = number1 + number2
+        number1, number2 = number2, sum
 	
     return sum
 
-n = int(input())
-print(fibonacci(n))
+print(fibonacci(9))
