@@ -40,13 +40,12 @@ jobs:
         pytest tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
     - name: Generate test badge
       if: success() || failure()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
             name: Test case results
             path: junit/test-results.xml
-    - name: Generate Badge URL
-      if: success() || failure()
-      run: test_result=$(python -c "import xml.etree.ElementTree as ET; tree = ET.parse('junit/test-results.xml'); root = tree.getroot(); test_result = root.find('test_result').text; print(test_result)")
-          badge_url="https://img.shields.io/badge/Tests-%20${test_result}-green.svg"
-          echo "::set-output name=badge_url::${badge_url}"
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+            name: Test case results
         
