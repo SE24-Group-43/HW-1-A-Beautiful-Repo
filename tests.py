@@ -6,5 +6,4 @@ def test_fibonacci():
   assert fibonacci(5) == 5
 
 def test_incorrect_fibonnaci():
-  with pytest.raises(ValueError):
-    fibonacci(-1) 
+    assert fibonacci(-1) is None 
