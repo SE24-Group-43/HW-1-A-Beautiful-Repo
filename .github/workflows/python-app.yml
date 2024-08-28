@@ -37,7 +37,7 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest pytest-cov
-        run: python3 -m pytest --cov-report term --cov-report xml:coverage.xml --cov=pyfdc
+        run: pytest test_fibonacci.py --doctest-modules --junitxml=junit/test-results.xml --cov=com --cov-report=xml --cov-report=html
     - name: Upload reports to codecov
       env:
         CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
