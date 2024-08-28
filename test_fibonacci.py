@@ -2,10 +2,10 @@
 import pytest
 from myfile import fibonacci
 
-def test_fibonacci():
+def test_fibonacci_0():
   assert fibonacci(5) == 5
 
-def test_fibonacci1():
+def test_fibonacci_1():
   assert fibonacci(-1) == 0
 
 #Testing
