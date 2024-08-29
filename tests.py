@@ -7,4 +7,4 @@ def test_fibonacci_0():
 
 def test_incorrect_fibonnaci():
   with pytest.raises(ValueError):
-    fibonacci(-1)
+    fibonacci(-1) 
